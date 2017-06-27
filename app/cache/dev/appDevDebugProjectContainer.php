@@ -2068,7 +2068,7 @@ class appDevDebugProjectContainer extends Container
 
         $e = new \Symfony\Component\Security\Http\AccessMap();
 
-        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($e, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => new \Symfony\Component\Security\Core\User\InMemoryUserProvider()), 'main', $a, $this->get('debug.event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 2 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5952a4b5960205.47024010', $a, $c), 3 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $e, $c)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), new \Symfony\Component\Security\Http\HttpUtils($d, $d), 'main', NULL, NULL, NULL, $a, false));
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($e, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => new \Symfony\Component\Security\Core\User\InMemoryUserProvider()), 'main', $a, $this->get('debug.event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 2 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5952ada55a6648.56786457', $a, $c), 3 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $e, $c)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), new \Symfony\Component\Security\Http\HttpUtils($d, $d), 'main', NULL, NULL, NULL, $a, false));
     }
 
     /**
@@ -3140,6 +3140,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath(($this->targetDirs[3].'/src/AppName/FrontOffice/HomepageBundle/Resources/views'), 'Homepage');
         $instance->addPath(($this->targetDirs[3].'/src/AppName/FrontOffice/StaticBundle/Resources/views'), 'Static');
         $instance->addPath(($this->targetDirs[3].'/src/AppName/FrontOffice/BlogBundle/Resources/views'), 'Blog');
+        $instance->addPath(($this->targetDirs[3].'/src/AppName/BackOffice/UserBundle/Resources/views'), 'User');
         $instance->addPath(($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views'), 'Debug');
         $instance->addPath(($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views'), 'WebProfiler');
         $instance->addPath(($this->targetDirs[3].'/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/views'), 'SensioDistribution');
@@ -3468,7 +3469,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_Authentication_ManagerService()
     {
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5952a4b5960205.47024010')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5952ada55a6648.56786457')), true);
 
         $instance->setEventDispatcher($this->get('debug.event_dispatcher'));
 
@@ -3660,11 +3661,11 @@ class appDevDebugProjectContainer extends Container
                 'SwiftmailerBundle' => 'Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle',
                 'DoctrineBundle' => 'Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle',
                 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle',
-                'AppBundle' => 'AppBundle\\AppBundle',
                 'MasterLayoutBundle' => 'AppName\\FrontOffice\\MasterLayoutBundle\\MasterLayoutBundle',
                 'HomepageBundle' => 'AppName\\FrontOffice\\HomepageBundle\\HomepageBundle',
                 'StaticBundle' => 'AppName\\FrontOffice\\StaticBundle\\StaticBundle',
                 'BlogBundle' => 'AppName\\FrontOffice\\BlogBundle\\BlogBundle',
+                'UserBundle' => 'AppName\\BackOffice\\UserBundle\\UserBundle',
                 'DebugBundle' => 'Symfony\\Bundle\\DebugBundle\\DebugBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
@@ -3706,11 +3707,6 @@ class appDevDebugProjectContainer extends Container
                     'path' => ($this->targetDirs[3].'/vendor/sensio/framework-extra-bundle'),
                     'namespace' => 'Sensio\\Bundle\\FrameworkExtraBundle',
                 ),
-                'AppBundle' => array(
-                    'parent' => NULL,
-                    'path' => ($this->targetDirs[3].'/src/AppBundle'),
-                    'namespace' => 'AppBundle',
-                ),
                 'MasterLayoutBundle' => array(
                     'parent' => NULL,
                     'path' => ($this->targetDirs[3].'/src/AppName/FrontOffice/MasterLayoutBundle'),
@@ -3730,6 +3726,11 @@ class appDevDebugProjectContainer extends Container
                     'parent' => NULL,
                     'path' => ($this->targetDirs[3].'/src/AppName/FrontOffice/BlogBundle'),
                     'namespace' => 'AppName\\FrontOffice\\BlogBundle',
+                ),
+                'UserBundle' => array(
+                    'parent' => NULL,
+                    'path' => ($this->targetDirs[3].'/src/AppName/BackOffice/UserBundle'),
+                    'namespace' => 'AppName\\BackOffice\\UserBundle',
                 ),
                 'DebugBundle' => array(
                     'parent' => NULL,

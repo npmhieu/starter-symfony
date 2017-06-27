@@ -54,6 +54,10 @@ class ComposerStaticInitb98747d597795bd21363fb764496c3c0
         array (
             'Psr\\Log\\' => 8,
         ),
+        'N' => 
+        array (
+            'Negotiation\\' => 12,
+        ),
         'M' => 
         array (
             'Monolog\\' => 8,
@@ -159,6 +163,10 @@ class ComposerStaticInitb98747d597795bd21363fb764496c3c0
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
+        'Negotiation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/willdurand/negotiation/src/Negotiation',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -202,6 +210,20 @@ class ComposerStaticInitb98747d597795bd21363fb764496c3c0
             'SensioLabs\\Security' => 
             array (
                 0 => __DIR__ . '/..' . '/sensiolabs/security-checker',
+            ),
+        ),
+        'J' => 
+        array (
+            'JsonpCallbackValidator' => 
+            array (
+                0 => __DIR__ . '/..' . '/willdurand/jsonp-callback-validator/src',
+            ),
+        ),
+        'F' => 
+        array (
+            'FOS\\RestBundle' => 
+            array (
+                0 => __DIR__ . '/..' . '/friendsofsymfony/rest-bundle',
             ),
         ),
         'D' => 

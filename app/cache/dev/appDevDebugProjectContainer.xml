@@ -15,11 +15,11 @@
       <parameter key="SwiftmailerBundle">Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle</parameter>
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
-      <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="MasterLayoutBundle">AppName\FrontOffice\MasterLayoutBundle\MasterLayoutBundle</parameter>
       <parameter key="HomepageBundle">AppName\FrontOffice\HomepageBundle\HomepageBundle</parameter>
       <parameter key="StaticBundle">AppName\FrontOffice\StaticBundle\StaticBundle</parameter>
       <parameter key="BlogBundle">AppName\FrontOffice\BlogBundle\BlogBundle</parameter>
+      <parameter key="UserBundle">AppName\BackOffice\UserBundle\UserBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -61,11 +61,6 @@
         <parameter key="path">/Users/nguyenphamminhhieu/MHG/projects/BASE/starter-symfony/vendor/sensio/framework-extra-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
       </parameter>
-      <parameter key="AppBundle" type="collection">
-        <parameter key="parent">null</parameter>
-        <parameter key="path">/Users/nguyenphamminhhieu/MHG/projects/BASE/starter-symfony/src/AppBundle</parameter>
-        <parameter key="namespace">AppBundle</parameter>
-      </parameter>
       <parameter key="MasterLayoutBundle" type="collection">
         <parameter key="parent">null</parameter>
         <parameter key="path">/Users/nguyenphamminhhieu/MHG/projects/BASE/starter-symfony/src/AppName/FrontOffice/MasterLayoutBundle</parameter>
@@ -85,6 +80,11 @@
         <parameter key="parent">null</parameter>
         <parameter key="path">/Users/nguyenphamminhhieu/MHG/projects/BASE/starter-symfony/src/AppName/FrontOffice/BlogBundle</parameter>
         <parameter key="namespace">AppName\FrontOffice\BlogBundle</parameter>
+      </parameter>
+      <parameter key="UserBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">/Users/nguyenphamminhhieu/MHG/projects/BASE/starter-symfony/src/AppName/BackOffice/UserBundle</parameter>
+        <parameter key="namespace">AppName\BackOffice\UserBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
@@ -1833,7 +1833,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5952a4b5960205.47024010</argument>
+            <argument>5952ada55a6648.56786457</argument>
           </service>
         </argument>
       </argument>
@@ -1962,7 +1962,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5952a4b5960205.47024010</argument>
+            <argument>5952ada55a6648.56786457</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2888,6 +2888,10 @@
       <call method="addPath">
         <argument>/Users/nguyenphamminhhieu/MHG/projects/BASE/starter-symfony/src/AppName/FrontOffice/BlogBundle/Resources/views</argument>
         <argument>Blog</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Users/nguyenphamminhhieu/MHG/projects/BASE/starter-symfony/src/AppName/BackOffice/UserBundle/Resources/views</argument>
+        <argument>User</argument>
       </call>
       <call method="addPath">
         <argument>/Users/nguyenphamminhhieu/MHG/projects/BASE/starter-symfony/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
