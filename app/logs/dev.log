@@ -1,0 +1,2 @@
+[2017-06-27 20:04:51] php.DEBUG: unlink(web/bundles/framework): No such file or directory {"type":2,"file":"/Users/nguyenphamminhhieu/MHG/projects/BASE/base-symfony/vendor/symfony/symfony/src/Symfony/Component/Filesystem/Filesystem.php","line":178,"level":28928} []
+[2017-06-27 20:04:51] php.DEBUG: unlink(web/bundles/sensiodistribution): No such file or directory {"type":2,"file":"/Users/nguyenphamminhhieu/MHG/projects/BASE/base-symfony/vendor/symfony/symfony/src/Symfony/Component/Filesystem/Filesystem.php","line":178,"level":28928} []
