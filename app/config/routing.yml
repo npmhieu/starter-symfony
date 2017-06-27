@@ -1,3 +1,19 @@
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+blog:
+    resource: "@BlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
+static:
+    resource: "@StaticBundle/Resources/config/routing.yml"
+    prefix:   /
+
+homepage:
+    resource: "@HomepageBundle/Resources/config/routing.yml"
+    prefix:   /
+
+master_layout:
+    resource: "@MasterLayoutBundle/Resources/config/routing.yml"
+    prefix:   /
