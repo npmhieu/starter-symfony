@@ -690,7 +690,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_metadata_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
-        $instance->setNamespace('sf2orm_default_944bbc14eabe36371081189ed1656969ddc63c18d19e373e4885b4d4bd9bf7c6');
+        $instance->setNamespace('sf2orm_default_78cf81fc950642acc4595b83a654451d976769facdea2b177ce56daadb98c14c');
 
         return $instance;
     }
@@ -707,7 +707,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_query_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
-        $instance->setNamespace('sf2orm_default_944bbc14eabe36371081189ed1656969ddc63c18d19e373e4885b4d4bd9bf7c6');
+        $instance->setNamespace('sf2orm_default_78cf81fc950642acc4595b83a654451d976769facdea2b177ce56daadb98c14c');
 
         return $instance;
     }
@@ -724,7 +724,7 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_result_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
-        $instance->setNamespace('sf2orm_default_944bbc14eabe36371081189ed1656969ddc63c18d19e373e4885b4d4bd9bf7c6');
+        $instance->setNamespace('sf2orm_default_78cf81fc950642acc4595b83a654451d976769facdea2b177ce56daadb98c14c');
 
         return $instance;
     }
@@ -2068,7 +2068,7 @@ class appDevDebugProjectContainer extends Container
 
         $e = new \Symfony\Component\Security\Http\AccessMap();
 
-        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($e, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => new \Symfony\Component\Security\Core\User\InMemoryUserProvider()), 'main', $a, $this->get('debug.event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 2 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '59529e428b3e61.45000024', $a, $c), 3 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $e, $c)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), new \Symfony\Component\Security\Http\HttpUtils($d, $d), 'main', NULL, NULL, NULL, $a, false));
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($e, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => new \Symfony\Component\Security\Core\User\InMemoryUserProvider()), 'main', $a, $this->get('debug.event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 2 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '59589ea75184a5.06255707', $a, $c), 3 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $e, $c)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), new \Symfony\Component\Security\Http\HttpUtils($d, $d), 'main', NULL, NULL, NULL, $a, false));
     }
 
     /**
@@ -3136,6 +3136,12 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath(($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views'), 'Twig');
         $instance->addPath(($this->targetDirs[3].'/vendor/symfony/swiftmailer-bundle/Resources/views'), 'Swiftmailer');
         $instance->addPath(($this->targetDirs[3].'/vendor/doctrine/doctrine-bundle/Resources/views'), 'Doctrine');
+        $instance->addPath(($this->targetDirs[3].'/src/AppName/FrontOffice/MasterLayoutBundle/Resources/views'), 'MasterLayout');
+        $instance->addPath(($this->targetDirs[3].'/src/AppName/FrontOffice/HomepageBundle/Resources/views'), 'Homepage');
+        $instance->addPath(($this->targetDirs[3].'/src/AppName/FrontOffice/StaticBundle/Resources/views'), 'Static');
+        $instance->addPath(($this->targetDirs[3].'/src/AppName/FrontOffice/BlogBundle/Resources/views'), 'Blog');
+        $instance->addPath(($this->targetDirs[3].'/src/AppName/BackOffice/UserBundle/Resources/views'), 'User');
+        $instance->addPath(($this->targetDirs[3].'/src/AppName/BackOffice/AdminBundle/Resources/views'), 'Admin');
         $instance->addPath(($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views'), 'Debug');
         $instance->addPath(($this->targetDirs[3].'/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views'), 'WebProfiler');
         $instance->addPath(($this->targetDirs[3].'/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/views'), 'SensioDistribution');
@@ -3464,7 +3470,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_Authentication_ManagerService()
     {
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('59529e428b3e61.45000024')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('59589ea75184a5.06255707')), true);
 
         $instance->setEventDispatcher($this->get('debug.event_dispatcher'));
 
@@ -3656,7 +3662,12 @@ class appDevDebugProjectContainer extends Container
                 'SwiftmailerBundle' => 'Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle',
                 'DoctrineBundle' => 'Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle',
                 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle',
-                'AppBundle' => 'AppBundle\\AppBundle',
+                'MasterLayoutBundle' => 'AppName\\FrontOffice\\MasterLayoutBundle\\MasterLayoutBundle',
+                'HomepageBundle' => 'AppName\\FrontOffice\\HomepageBundle\\HomepageBundle',
+                'StaticBundle' => 'AppName\\FrontOffice\\StaticBundle\\StaticBundle',
+                'BlogBundle' => 'AppName\\FrontOffice\\BlogBundle\\BlogBundle',
+                'UserBundle' => 'AppName\\BackOffice\\UserBundle\\UserBundle',
+                'AdminBundle' => 'AppName\\BackOffice\\AdminBundle\\AdminBundle',
                 'DebugBundle' => 'Symfony\\Bundle\\DebugBundle\\DebugBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
@@ -3698,10 +3709,35 @@ class appDevDebugProjectContainer extends Container
                     'path' => ($this->targetDirs[3].'/vendor/sensio/framework-extra-bundle'),
                     'namespace' => 'Sensio\\Bundle\\FrameworkExtraBundle',
                 ),
-                'AppBundle' => array(
+                'MasterLayoutBundle' => array(
                     'parent' => NULL,
-                    'path' => ($this->targetDirs[3].'/src/AppBundle'),
-                    'namespace' => 'AppBundle',
+                    'path' => ($this->targetDirs[3].'/src/AppName/FrontOffice/MasterLayoutBundle'),
+                    'namespace' => 'AppName\\FrontOffice\\MasterLayoutBundle',
+                ),
+                'HomepageBundle' => array(
+                    'parent' => NULL,
+                    'path' => ($this->targetDirs[3].'/src/AppName/FrontOffice/HomepageBundle'),
+                    'namespace' => 'AppName\\FrontOffice\\HomepageBundle',
+                ),
+                'StaticBundle' => array(
+                    'parent' => NULL,
+                    'path' => ($this->targetDirs[3].'/src/AppName/FrontOffice/StaticBundle'),
+                    'namespace' => 'AppName\\FrontOffice\\StaticBundle',
+                ),
+                'BlogBundle' => array(
+                    'parent' => NULL,
+                    'path' => ($this->targetDirs[3].'/src/AppName/FrontOffice/BlogBundle'),
+                    'namespace' => 'AppName\\FrontOffice\\BlogBundle',
+                ),
+                'UserBundle' => array(
+                    'parent' => NULL,
+                    'path' => ($this->targetDirs[3].'/src/AppName/BackOffice/UserBundle'),
+                    'namespace' => 'AppName\\BackOffice\\UserBundle',
+                ),
+                'AdminBundle' => array(
+                    'parent' => NULL,
+                    'path' => ($this->targetDirs[3].'/src/AppName/BackOffice/AdminBundle'),
+                    'namespace' => 'AppName\\BackOffice\\AdminBundle',
                 ),
                 'DebugBundle' => array(
                     'parent' => NULL,
