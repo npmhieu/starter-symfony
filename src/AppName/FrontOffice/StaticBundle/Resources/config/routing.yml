@@ -1,3 +1,23 @@
-static_homepage:
-    path:     /
-    defaults: { _controller: StaticBundle:Default:index }
+static_about_us:
+    path:     /about-us
+    defaults: { _controller: StaticBundle:Static:aboutUs }
+
+static_contact_us:
+    path:     /contact-us
+    defaults: { _controller: StaticBundle:Static:contactUs }
+
+static_term_of_use:
+    path:     /term-of-use
+    defaults: { _controller: StaticBundle:Static:termOfUse }
+
+static_privacy_policy:
+    path:     /privacy-policy
+    defaults: { _controller: StaticBundle:Static:privacyPolicy }
+
+static_faq:
+    path:     /faq
+    defaults: { _controller: StaticBundle:Static:faq }
+
+static_support:
+    path:     /support
+    defaults: { _controller: StaticBundle:Static:support }

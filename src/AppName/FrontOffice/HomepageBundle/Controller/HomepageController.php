@@ -4,10 +4,10 @@ namespace AppName\FrontOffice\HomepageBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class HomepageController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('HomepageBundle:Default:index.html.twig');
+        return $this->render('HomepageBundle:homepage:index.html.twig');
     }
 }

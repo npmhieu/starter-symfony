@@ -4,10 +4,10 @@ namespace AppName\FrontOffice\BlogBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class BlogController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('BlogBundle:Default:index.html.twig');
+        return $this->render('BlogBundle:blog:index.html.twig');
     }
 }
