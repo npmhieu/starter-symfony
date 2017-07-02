@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {% block metatags %}{% endblock %}
+
+    <title>{% block title %}Welcome!{% endblock %}</title>
+
+    {% block stylesheets %}
+        <!-- MAIN WEBSITE FONT: ROBOTO -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet">
+        <!-- END MAIN WEBSITE FONT: ROBOTO -->
+
+        <!-- BOOTSTRAP CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- END BOOTSTRAP CSS -->
+
+        <!-- AWESOME ICON FONT -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+              integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <!-- END AWESOME ICON FONT -->
+
+        <!-- GOOGLE MATERIAL ICON FONT -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- END GOOGLE MATERIAL ICON FONT -->
+
+        {#{% stylesheets#}
+        {#'@AppBundle/Resources/public/flaticon/flaticon.css'#}
+        {#output='bundles/app/css/flaticon.css' %}#}
+        {#<link rel="stylesheet" href="{{ asset_url }}"/>#}
+        {#{% endstylesheets %}#}
+
+        {% stylesheets 'bundles/emaths/css/*' filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+
+        {% block stylesheets %}
+            <!-- Latest compiled and minified SCSS -->
+            {% stylesheets filter="scssphp" output="bundles/app/css/app.css"
+            "@MasterLayoutBundle/Resources/public/css/theme.css"
+            '@MasterLayoutBundle/Resources/public/css/style.min.css'
+            %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+            {% endstylesheets %}
+
+        {% endblock %}
+
+    {% endblock %}
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+{% include 'MasterLayoutBundle:front_office_layout:widgets/menu.html.twig' %}
+<div class="content-wrapper">
+    {% block body %}{% endblock %}
+</div>
+
+{% block javascripts %}
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+{% endblock %}
+</body>
+</html>
