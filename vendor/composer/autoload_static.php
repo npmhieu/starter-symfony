@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitb98747d597795bd21363fb764496c3c0
+class ComposerStaticInit3f535339cfd146c07a4d008b80b026fb
 {
     public static $files = array (
         '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
@@ -61,6 +61,10 @@ class ComposerStaticInitb98747d597795bd21363fb764496c3c0
         'M' => 
         array (
             'Monolog\\' => 8,
+        ),
+        'L' => 
+        array (
+            'Leafo\\ScssPhp\\' => 14,
         ),
         'I' => 
         array (
@@ -170,6 +174,10 @@ class ComposerStaticInitb98747d597795bd21363fb764496c3c0
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Leafo\\ScssPhp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/leafo/scssphp/src',
         ),
         'Incenteev\\ParameterHandler\\' => 
         array (
@@ -283,16 +291,23 @@ class ComposerStaticInitb98747d597795bd21363fb764496c3c0
         'SessionHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php54/Resources/stubs/SessionHandlerInterface.php',
         'SqlFormatter' => __DIR__ . '/..' . '/jdorn/sql-formatter/lib/SqlFormatter.php',
         'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
+        'scss_formatter' => __DIR__ . '/..' . '/leafo/scssphp/classmap.php',
+        'scss_formatter_compressed' => __DIR__ . '/..' . '/leafo/scssphp/classmap.php',
+        'scss_formatter_crunched' => __DIR__ . '/..' . '/leafo/scssphp/classmap.php',
+        'scss_formatter_nested' => __DIR__ . '/..' . '/leafo/scssphp/classmap.php',
+        'scss_parser' => __DIR__ . '/..' . '/leafo/scssphp/classmap.php',
+        'scss_server' => __DIR__ . '/..' . '/leafo/scssphp/classmap.php',
+        'scssc' => __DIR__ . '/..' . '/leafo/scssphp/classmap.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitb98747d597795bd21363fb764496c3c0::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitb98747d597795bd21363fb764496c3c0::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInitb98747d597795bd21363fb764496c3c0::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitb98747d597795bd21363fb764496c3c0::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitb98747d597795bd21363fb764496c3c0::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3f535339cfd146c07a4d008b80b026fb::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3f535339cfd146c07a4d008b80b026fb::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit3f535339cfd146c07a4d008b80b026fb::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit3f535339cfd146c07a4d008b80b026fb::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit3f535339cfd146c07a4d008b80b026fb::$classMap;
 
         }, null, ClassLoader::class);
     }

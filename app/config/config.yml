@@ -78,4 +78,4 @@ assetic:
     filters:
         cssrewrite: ~
         scssphp:
-                    formatter: 'Leafo\ScssPhp\Formatter\Compressed'
+            formatter: 'Leafo\ScssPhp\Formatter\Compressed'

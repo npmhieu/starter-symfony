@@ -29,26 +29,15 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <!-- END GOOGLE MATERIAL ICON FONT -->
 
-        {#{% stylesheets#}
-        {#'@AppBundle/Resources/public/flaticon/flaticon.css'#}
-        {#output='bundles/app/css/flaticon.css' %}#}
-        {#<link rel="stylesheet" href="{{ asset_url }}"/>#}
-        {#{% endstylesheets %}#}
 
-        {% stylesheets 'bundles/emaths/css/*' filter='cssrewrite' %}
+        <!-- LATEST COMPILED AND MINIFIED SCSS -->
+        {% stylesheets filter="scssphp" output="bundles/app/css/app.css"
+        "@MasterLayoutBundle/Resources/public/css/theme.css"
+        "@MasterLayoutBundle/Resources/public/css/styles.css"
+        %}
         <link rel="stylesheet" href="{{ asset_url }}" />
         {% endstylesheets %}
-
-        {% block stylesheets %}
-            <!-- Latest compiled and minified SCSS -->
-            {% stylesheets filter="scssphp" output="bundles/app/css/app.css"
-            "@MasterLayoutBundle/Resources/public/css/theme.css"
-            '@MasterLayoutBundle/Resources/public/css/style.min.css'
-            %}
-            <link rel="stylesheet" href="{{ asset_url }}" />
-            {% endstylesheets %}
-
-        {% endblock %}
+        <!-- END LATEST COMPILED AND MINIFIED SCSS -->
 
     {% endblock %}
 

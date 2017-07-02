@@ -1,1 +1,31 @@
-Hello World! Day la home page
+{% extends 'MasterLayoutBundle:front_office_layout:base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <!-- OWLCAROUSEL2 LIB -->
+    <!--https://github.com/OwlCarousel2/OwlCarousel2-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
+    <!-- END OWLCAROUSEL2 LIB -->
+{% endblock %}
+
+
+
+{% block body %}
+
+    <div class="m1">hello W</div>
+
+    {% include ('HomepageBundle:homepage:widgets/intro_carousel.html.twig') %}
+    {% include ('HomepageBundle:homepage:widgets/courses_carousel.html.twig') %}
+    {% include ('HomepageBundle:homepage:widgets/trial_register.html.twig') %}
+    {% include ('HomepageBundle:homepage:widgets/news.html.twig') %}
+    {% include ('HomepageBundle:homepage:widgets/info.html.twig') %}
+
+    {#{% block javascripts %}#}
+        {#{{ parent() }}#}
+        {#<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>#}
+        {#{% javascripts 'bundles/emaths/js/*' %}#}
+        {#<script src="{{ asset_url }}"></script>#}
+        {#{% endjavascripts %}#}
+    {#{% endblock %}#}
+{% endblock %}
