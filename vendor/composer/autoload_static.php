@@ -53,6 +53,7 @@ class ComposerStaticInit3f535339cfd146c07a4d008b80b026fb
         'P' => 
         array (
             'Psr\\Log\\' => 8,
+            'Patchwork\\' => 10,
         ),
         'N' => 
         array (
@@ -166,6 +167,10 @@ class ComposerStaticInit3f535339cfd146c07a4d008b80b026fb
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'Patchwork\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/patchwork/jsqueeze/src',
         ),
         'Negotiation\\' => 
         array (
